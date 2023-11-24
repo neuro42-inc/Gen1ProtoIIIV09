@@ -1,0 +1,501 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DS4Windows/3.1.10": {
+        "dependencies": {
+          "DotNetProjects.Extended.Wpf.Toolkit": "5.0.103",
+          "H.NotifyIcon.Wpf": "2.0.68",
+          "MdXaml": "1.16.0",
+          "NLog": "5.0.4",
+          "Nefarius.Utilities.DeviceManagement": "3.2.184",
+          "Ookii.Dialogs.Wpf": "5.0.1",
+          "System.Management": "6.0.0",
+          "TaskScheduler": "2.10.1",
+          "WPFLocalizeExtension": "3.9.4",
+          "WpfScreenHelper": "2.1.0",
+          "bloomtom.HttpProgress": "2.3.2",
+          "FakerInputWrapper": "1.0.3.0",
+          "Nefarius.ViGEm.Client": "1.0.0.0",
+          "SharpOSC": "0.1.1.0"
+        },
+        "runtime": {
+          "DS4Windows.dll": {}
+        },
+        "resources": {
+          "ja/DS4Windows.resources.dll": {
+            "locale": "ja"
+          },
+          "ru/DS4Windows.resources.dll": {
+            "locale": "ru"
+          },
+          "ar/DS4Windows.resources.dll": {
+            "locale": "ar"
+          },
+          "cs/DS4Windows.resources.dll": {
+            "locale": "cs"
+          },
+          "de/DS4Windows.resources.dll": {
+            "locale": "de"
+          },
+          "es/DS4Windows.resources.dll": {
+            "locale": "es"
+          },
+          "fr/DS4Windows.resources.dll": {
+            "locale": "fr"
+          },
+          "he/DS4Windows.resources.dll": {
+            "locale": "he"
+          },
+          "hu-HU/DS4Windows.resources.dll": {
+            "locale": "hu-HU"
+          },
+          "it/DS4Windows.resources.dll": {
+            "locale": "it"
+          },
+          "nl/DS4Windows.resources.dll": {
+            "locale": "nl"
+          },
+          "pl/DS4Windows.resources.dll": {
+            "locale": "pl"
+          },
+          "pt-BR/DS4Windows.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "pt/DS4Windows.resources.dll": {
+            "locale": "pt"
+          },
+          "se/DS4Windows.resources.dll": {
+            "locale": "se"
+          },
+          "uk-UA/DS4Windows.resources.dll": {
+            "locale": "uk-UA"
+          },
+          "zh-Hans/DS4Windows.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "zh-Hant/DS4Windows.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "AvalonEdit/6.0.0": {
+        "runtime": {
+          "lib/netcoreapp3.0/ICSharpCode.AvalonEdit.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.0"
+          }
+        }
+      },
+      "bloomtom.HttpProgress/2.3.2": {
+        "runtime": {
+          "lib/netstandard2.0/HttpProgress.dll": {
+            "assemblyVersion": "2.3.1.0",
+            "fileVersion": "2.3.1.0"
+          }
+        }
+      },
+      "DotNetProjects.Extended.Wpf.Toolkit/5.0.103": {
+        "runtime": {
+          "lib/net6.0-windows7.0/DotNetProjects.Wpf.Extended.Toolkit.dll": {
+            "assemblyVersion": "5.0.103.0",
+            "fileVersion": "5.0.103.0"
+          }
+        }
+      },
+      "H.NotifyIcon/2.0.68": {
+        "dependencies": {
+          "System.Drawing.Common": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/H.NotifyIcon.dll": {
+            "assemblyVersion": "2.0.68.0",
+            "fileVersion": "2.0.68.0"
+          }
+        }
+      },
+      "H.NotifyIcon.Wpf/2.0.68": {
+        "dependencies": {
+          "H.NotifyIcon": "2.0.68"
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/H.NotifyIcon.Wpf.dll": {
+            "assemblyVersion": "2.0.68.0",
+            "fileVersion": "2.0.68.0"
+          }
+        }
+      },
+      "MdXaml/1.16.0": {
+        "dependencies": {
+          "AvalonEdit": "6.0.0",
+          "MdXaml.Plugins": "1.16.0"
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/MdXaml.dll": {
+            "assemblyVersion": "1.16.0.0",
+            "fileVersion": "1.16.0.0"
+          }
+        }
+      },
+      "MdXaml.Plugins/1.16.0": {
+        "runtime": {
+          "lib/net5.0-windows7.0/MdXaml.Plugins.dll": {
+            "assemblyVersion": "1.16.0.0",
+            "fileVersion": "1.16.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/5.0.0": {},
+      "Microsoft.Win32.Registry/5.0.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        }
+      },
+      "Microsoft.Win32.SystemEvents/6.0.0": {},
+      "Nefarius.Utilities.DeviceManagement/3.2.184": {
+        "runtime": {
+          "lib/netstandard2.0/Nefarius.Utilities.DeviceManagement.dll": {
+            "assemblyVersion": "3.2.184.0",
+            "fileVersion": "3.2.184.0"
+          }
+        }
+      },
+      "NLog/5.0.4": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.4.1331"
+          }
+        }
+      },
+      "Ookii.Dialogs.Wpf/5.0.1": {
+        "runtime": {
+          "lib/net6.0-windows7.0/Ookii.Dialogs.Wpf.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.1.0"
+          }
+        }
+      },
+      "System.CodeDom/6.0.0": {},
+      "System.Diagnostics.EventLog/5.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "Microsoft.Win32.Registry": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        }
+      },
+      "System.Drawing.Common/6.0.0": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "6.0.0"
+        }
+      },
+      "System.Management/6.0.0": {
+        "dependencies": {
+          "System.CodeDom": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.Management.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Management.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "System.Security.AccessControl/5.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        }
+      },
+      "System.Security.Principal.Windows/5.0.0": {},
+      "TaskScheduler/2.10.1": {
+        "dependencies": {
+          "Microsoft.Win32.Registry": "5.0.0",
+          "System.Diagnostics.EventLog": "5.0.0",
+          "System.Security.AccessControl": "5.0.0"
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Microsoft.Win32.TaskScheduler.dll": {
+            "assemblyVersion": "2.10.1.0",
+            "fileVersion": "2.10.1.0"
+          }
+        },
+        "resources": {
+          "lib/net6.0-windows7.0/de/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/es/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/fr/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/it/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net6.0-windows7.0/pl/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net6.0-windows7.0/ru/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/zh-CN/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-Hant/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "WPFLocalizeExtension/3.9.4": {
+        "dependencies": {
+          "System.Drawing.Common": "6.0.0",
+          "System.Management": "6.0.0",
+          "XAMLMarkupExtensions": "2.1.3"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/WPFLocalizeExtension.dll": {
+            "assemblyVersion": "3.9.4.0",
+            "fileVersion": "3.9.4.0"
+          }
+        }
+      },
+      "WpfScreenHelper/2.1.0": {
+        "runtime": {
+          "lib/netcoreapp3.1/WpfScreenHelper.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
+      "XAMLMarkupExtensions/2.1.3": {
+        "runtime": {
+          "lib/netcoreapp3.1/XAMLMarkupExtensions.dll": {
+            "assemblyVersion": "2.1.3.0",
+            "fileVersion": "2.1.3.0"
+          }
+        }
+      },
+      "FakerInputWrapper/1.0.3.0": {
+        "runtime": {
+          "FakerInputWrapper.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
+          }
+        }
+      },
+      "Nefarius.ViGEm.Client/1.0.0.0": {
+        "runtime": {
+          "Nefarius.ViGEm.Client.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SharpOSC/0.1.1.0": {
+        "runtime": {
+          "SharpOSC.dll": {
+            "assemblyVersion": "0.1.1.0",
+            "fileVersion": "0.1.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DS4Windows/3.1.10": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": "",
+      "path": "./"
+    },
+    "AvalonEdit/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QMbyJrlhOuWzLRPqvW724ly9XbSEkp8Xg2mQY7tvsh1se1pDEJnmDjS6c6OuqDe2Q37uCnXwKdV8tJUx2iLUnw==",
+      "path": "avalonedit/6.0.0",
+      "hashPath": "avalonedit.6.0.0.nupkg.sha512"
+    },
+    "bloomtom.HttpProgress/2.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DxnFhxZqMYJl08gs3b75UUjTN86YUN29hRPYXova3eS3q+XTi1kW9I/bHuBH2VDn33F6fE2XlKkVu7Jz/gzGxw==",
+      "path": "bloomtom.httpprogress/2.3.2",
+      "hashPath": "bloomtom.httpprogress.2.3.2.nupkg.sha512"
+    },
+    "DotNetProjects.Extended.Wpf.Toolkit/5.0.103": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mGKdi31cgyhE9M7MfKRPunwrLGqlC2I+gdH+H9QgQvYj8GM2oUaVdmIldtOC+9GU+EkibOW8LeffYwUe6roIWQ==",
+      "path": "dotnetprojects.extended.wpf.toolkit/5.0.103",
+      "hashPath": "dotnetprojects.extended.wpf.toolkit.5.0.103.nupkg.sha512"
+    },
+    "H.NotifyIcon/2.0.68": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iMrIbd5MWjnNcpenNMKRCCOxT+G93MU0bGiKq+1HxJCMs/XTZtIZyn5rMw0WB2cHlBdgncr5Rn+dLrLhn9DNTw==",
+      "path": "h.notifyicon/2.0.68",
+      "hashPath": "h.notifyicon.2.0.68.nupkg.sha512"
+    },
+    "H.NotifyIcon.Wpf/2.0.68": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zbxfMN03fEuR+ad+K2vfFsupF1QAr/wzPucJgWneKoBbHuQ2TeRUG683nmyGfiHpx3x8+7SkzGDdr3Pm9IhcTg==",
+      "path": "h.notifyicon.wpf/2.0.68",
+      "hashPath": "h.notifyicon.wpf.2.0.68.nupkg.sha512"
+    },
+    "MdXaml/1.16.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K6sqhrYRDE+wo1yeDGxpXKCN+LPFjp75+DnA2+GpfUpEXjxNyPThI+vqlOpNBxkpyj2DZGi/n/xW7m3FxrhN7g==",
+      "path": "mdxaml/1.16.0",
+      "hashPath": "mdxaml.1.16.0.nupkg.sha512"
+    },
+    "MdXaml.Plugins/1.16.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J+5sADA2v5QPlCdGAMxplQG7Lc2bdJ0riWBMayKGPzPdO6kVzLJ8lop+ooKmCaB6CcK0rPPzf8RlAX7in5Fa1A==",
+      "path": "mdxaml.plugins/1.16.0",
+      "hashPath": "mdxaml.plugins.1.16.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VyPlqzH2wavqquTcYpkIIAQ6WdenuKoFN0BdYBbCWsclXacSOHNQn66Gt4z5NBqEYW0FAPm5rlvki9ZiCij5xQ==",
+      "path": "microsoft.netcore.platforms/5.0.0",
+      "hashPath": "microsoft.netcore.platforms.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.Registry/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dDoKi0PnDz31yAyETfRntsLArTlVAVzUzCIvvEDsDsucrl33Dl8pIJG06ePTJTI3tGpeyHS9Cq7Foc/s4EeKcg==",
+      "path": "microsoft.win32.registry/5.0.0",
+      "hashPath": "microsoft.win32.registry.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
+      "path": "microsoft.win32.systemevents/6.0.0",
+      "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
+    },
+    "Nefarius.Utilities.DeviceManagement/3.2.184": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FWWiRkG+0374Ei8A8qKdj6BrQMCfK/zE7C5+kSYwSGT8NenxDI4IIjeXEvru1QGZ+fex65T41mvpe4PELg3srA==",
+      "path": "nefarius.utilities.devicemanagement/3.2.184",
+      "hashPath": "nefarius.utilities.devicemanagement.3.2.184.nupkg.sha512"
+    },
+    "NLog/5.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hMyC7jq1m7c339DZXTRz96b+0YsIYSwAUB8sAWMtqXd2uwJjYe+y1k74fbItODPqDuE/krd6A4mxew9gLMS+PQ==",
+      "path": "nlog/5.0.4",
+      "hashPath": "nlog.5.0.4.nupkg.sha512"
+    },
+    "Ookii.Dialogs.Wpf/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iZNnZwqTpK0cfR0vkotncP1c025/PHlIdzc7iEKBYwhVv1V0zXp9/RT/O0kMhsmlwXqRxxbE4pdhfinbJXtjPg==",
+      "path": "ookii.dialogs.wpf/5.0.1",
+      "hashPath": "ookii.dialogs.wpf.5.0.1.nupkg.sha512"
+    },
+    "System.CodeDom/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CPc6tWO1LAer3IzfZufDBRL+UZQcj5uS207NHALQzP84Vp/z6wF0Aa0YZImOQY8iStY0A2zI/e3ihKNPfUm8XA==",
+      "path": "system.codedom/6.0.0",
+      "hashPath": "system.codedom.6.0.0.nupkg.sha512"
+    },
+    "System.Diagnostics.EventLog/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FHkCwUfsTs+/5tsK+c0egLfacUgbhvcwi3wUFWSEEArSXao343mYqcpOVVFMlcCkdNtjU4YwAWaKYwal6f02og==",
+      "path": "system.diagnostics.eventlog/5.0.0",
+      "hashPath": "system.diagnostics.eventlog.5.0.0.nupkg.sha512"
+    },
+    "System.Drawing.Common/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NfuoKUiP2nUWwKZN6twGqXioIe1zVD0RIj2t976A+czLHr2nY454RwwXs6JU9Htc6mwqL6Dn/nEL3dpVf2jOhg==",
+      "path": "system.drawing.common/6.0.0",
+      "hashPath": "system.drawing.common.6.0.0.nupkg.sha512"
+    },
+    "System.Management/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sHsESYMmPDhQuOC66h6AEOs/XowzKsbT9srMbX71TCXP58hkpn1BqBjdmKj1+DCA/WlBETX1K5WjQHwmV0Txrg==",
+      "path": "system.management/6.0.0",
+      "hashPath": "system.management.6.0.0.nupkg.sha512"
+    },
+    "System.Security.AccessControl/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dagJ1mHZO3Ani8GH0PHpPEe/oYO+rVdbQjvjJkBRNQkX4t0r1iaeGn8+/ybkSLEan3/slM0t59SVdHzuHf2jmw==",
+      "path": "system.security.accesscontrol/5.0.0",
+      "hashPath": "system.security.accesscontrol.5.0.0.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t0MGLukB5WAVU9bO3MGzvlGnyJPgUlcwerXn1kzBRjwLKixT96XV0Uza41W49gVd8zEMFu9vQEFlv0IOrytICA==",
+      "path": "system.security.principal.windows/5.0.0",
+      "hashPath": "system.security.principal.windows.5.0.0.nupkg.sha512"
+    },
+    "TaskScheduler/2.10.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-12b19oq9SOGbBq8745jQVQ08jAjgnsGXidQfclaZ94UZCtJRPkNfM8pz0D7pj04RHcQJQdZZnAUuC93reALqNg==",
+      "path": "taskscheduler/2.10.1",
+      "hashPath": "taskscheduler.2.10.1.nupkg.sha512"
+    },
+    "WPFLocalizeExtension/3.9.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0Nw59pTWCv7C8MLo/fotKcINmdr33M0Q+Z4YsaOSEa+KMdRnrTiabDGAbuyVcp5wrsMZZc38T9PQT0P9hJ8+kA==",
+      "path": "wpflocalizeextension/3.9.4",
+      "hashPath": "wpflocalizeextension.3.9.4.nupkg.sha512"
+    },
+    "WpfScreenHelper/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZzS/lkme7QcYIvQgsVw9D1OuI/fSrNnoDXXDCrFmacYVvdGXOQlGEeQBbKdBP9r4k+3CsUQMZq59RU99I9Mjhw==",
+      "path": "wpfscreenhelper/2.1.0",
+      "hashPath": "wpfscreenhelper.2.1.0.nupkg.sha512"
+    },
+    "XAMLMarkupExtensions/2.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8HAZJPLMd3NQw6h6YapkjDu37SrZFobVgp5bZWq5iRn8/1ptA/Jy8kkzDj6V8+224+nYl43kQYzvYELEI4+rNg==",
+      "path": "xamlmarkupextensions/2.1.3",
+      "hashPath": "xamlmarkupextensions.2.1.3.nupkg.sha512"
+    },
+    "FakerInputWrapper/1.0.3.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Nefarius.ViGEm.Client/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpOSC/0.1.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

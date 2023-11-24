@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="n42_Robot_PROTO_III.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:geared="clr-namespace:LiveCharts.Geared;assembly=LiveCharts.Geared"
+             xmlns:local="clr-namespace:n42_Robot_PROTO_III"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel x:Name="DOF_1_Graph_DockPanel" Visibility="Collapsed" Margin="4,0,4,1"  Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="6">
+        <StackPanel Orientation="Vertical">
+            <lvc:CartesianChart x:Name="DOF_1_Chart" Hoverable="False"  DataTooltip="{x:Null}" Height="419" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1238" LegendLocation="Bottom" DisableAnimations="True" Padding="0" Pan="None"  >
+                <lvc:CartesianChart.Series>
+                    <geared:GLineSeries x:Name="DOF_1_Values" Title = "DOF_1_Position" Values="{Binding DOF_1_Position}" AllowDrop="False" PointGeometry="{x:Null}" LineSmoothness="4"  PointGeometrySize="0" StrokeThickness="4" Stroke="#FF4249D1" ></geared:GLineSeries>
+                </lvc:CartesianChart.Series>
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Foreground="Black" MinValue="0" MaxValue="2000" FontSize="22"  ShowLabels="False" Title="Time">
+                        <lvc:Axis.Sections>
+                            <lvc:AxisSection Value="{Binding XVPointer}"
+                                             SectionWidth="5"
+                                             SectionOffset="-2.5"
+                                             Fill="#59FF5722"
+                                             Stroke="#ff5722"
+                                             DisableAnimations="True"
+                                             StrokeThickness=".5"
+                                             DataLabel="False"/>
+                        </lvc:Axis.Sections>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis FontSize="16" Foreground="Black" MinValue="-2" MaxValue="2">
+                        <lvc:Axis.Sections>
+                            <lvc:AxisSection Value="{Binding YVPointer}" 
+                                         DataLabel="False"         
+                                         Margin="20,0,-20,0"          
+                                         StrokeThickness="1"
+                                         Stroke="#ff5722"
+                                         DisableAnimations="True"
+                                         DataLabelForeground="White"
+                                         Panel.ZIndex="1"/>
+                        </lvc:Axis.Sections>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+
+            <lvc:CartesianChart x:Name="DOF_2_Chart" Hoverable="False" DisableAnimations="True" DataTooltip="{x:Null}" Height="419" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1234" Padding="0" LegendLocation="Bottom" Pan="None" >
+                <lvc:CartesianChart.Series>
+                    <geared:GLineSeries x:Name="DOF_2_Values" Title = "DOF_2_POS" Values="{Binding DOF_2_Position}" AllowDrop="False" PointGeometry="{x:Null}" LineSmoothness="4" PointGeometrySize="0" StrokeThickness="4" Stroke="#FF117758"></geared:GLineSeries>
+                </lvc:CartesianChart.Series>
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Foreground="Black" MaxValue="2000" FontSize="22"  ShowLabels="False" Title="Time">
+                        <lvc:Axis.Sections>
+                            <lvc:AxisSection Value="{Binding XFPointer}"
+                                             SectionWidth="5"
+                                             SectionOffset="-2.5"
+                                             Fill="#59FF5722"
+                                             Stroke="#ff5722"
+                                             DisableAnimations="True"
+                                             StrokeThickness=".5"
+                                             DataLabel="False"/>
+                        </lvc:Axis.Sections>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis FontSize="16" Foreground="Black" MinValue="-2" MaxValue="2">
+                        <lvc:Axis.Sections>
+                            <lvc:AxisSection Value="{Binding YFPointer}" 
+                                         DataLabel="False"
+                                         Margin="10,0,10,0" 
+                                         StrokeThickness="1"
+                                         Stroke="#ff5722"
+                                         DisableAnimations="True"
+                                         DataLabelForeground="White"
+                                         Panel.ZIndex="1"/>
+                        </lvc:Axis.Sections>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+        </StackPanel>
+    </DockPanel>
+</UserControl>

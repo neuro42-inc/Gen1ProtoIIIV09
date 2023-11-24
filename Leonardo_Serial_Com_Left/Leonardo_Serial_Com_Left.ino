@@ -1,0 +1,157 @@
+// Visual Micro
+// 
+/*
+    Name:       Leonardo_Serial_Com_Left.ino
+    Created:	12/12/2022 12:00:00 AM
+    Author:     DESKTOP-RDPP2O1\Neuro42_Robot (Hamidreza Hoshyarmanesh)
+*/
+
+
+//the pin that controls the pulse
+const int PulsePin_L = 2;       //Motor 1, Rotation, Left thumbstick
+
+//the pin that controls the direction
+const int DirectionPin_L = 3;
+
+//the pin that controls the amplifier supply voltage (+5V) 
+const int Motor_active_L = 4;
+
+const int deadband = 6700;
+const short short_MaxValue = 32767.0;  //the max value stored in two bytes
+bool DIR_H = HIGH;
+const byte numChars = 32;
+char receivedChars[numChars];
+
+float leftThumbStick;
+
+float leftThumbStick_mapped;
+char recvChar;
+boolean newData = false;
+char rc;
+int leftThumbStick_old = 0; 
+
+
+void setup() {
+    // declare the ledPin as an OUTPUT:
+    Serial.begin(57600);
+    pinMode(DirectionPin_L, OUTPUT);
+    pinMode(PulsePin_L, OUTPUT);
+    pinMode(Motor_active_L, OUTPUT);
+    digitalWrite(Motor_active_L, LOW);
+}
+
+void loop() {
+
+    if (Serial.available() > 0)
+    {
+        recvWithStartEndMarkers();
+    }
+    
+}
+
+
+void recvWithStartEndMarkers() {
+    static boolean recvInProgress = false;
+    static byte ndx = 0;
+    char startMarker = '<';
+    char endMarker = '>';
+
+
+    // while (Serial.available() > 0) {
+    rc = Serial.read();
+    if (recvInProgress == true) {
+        if (rc != endMarker) {
+            receivedChars[ndx] = rc;
+            ndx++;
+            if (ndx >= numChars) {
+                ndx = numChars - 1;
+            }
+        }
+        else {
+            receivedChars[ndx] = '\0'; // terminate the string
+            recvInProgress = false;
+            ndx = 0;
+            newData = true;
+            parseData();
+        }
+    }
+
+    else if (rc == startMarker) {
+        recvInProgress = true;
+    }
+
+    Serial.flush();
+    
+    // }
+}
+
+void parseData() {
+
+    // split the data into its parts
+    if (newData == true) {
+        char* strtokIndx; // this is used by strtok() as an index
+
+        strtokIndx = strtok((char*)receivedChars, "<,>");
+        leftThumbStick = atoi(strtokIndx);
+
+        if (leftThumbStick > 0 && (leftThumbStick * leftThumbStick_old > 0)) {
+            
+            if (leftThumbStick >= deadband) {
+                digitalWrite(DirectionPin_L, DIR_H);
+                leftThumbStick_mapped = leftThumbStick / short_MaxValue * 100.0;
+                digitalWrite(Motor_active_L, HIGH);
+                pulsegeneration_L();
+            }
+        }
+        else if (leftThumbStick < 0 && (leftThumbStick * leftThumbStick_old > 0)) {
+            
+            if (abs(leftThumbStick) >= deadband) {
+                digitalWrite(DirectionPin_L, !DIR_H);
+                leftThumbStick_mapped = abs(leftThumbStick) / short_MaxValue * 100.0;
+                digitalWrite(Motor_active_L, HIGH);
+                pulsegeneration_L();
+            }
+        }
+        else {
+            digitalWrite(Motor_active_L, LOW);
+        }
+
+        newData = false;
+        leftThumbStick_old = leftThumbStick;
+    }
+}
+
+void pulsegeneration_L() {
+
+    //unsigned long currentMillis = millis();
+    //interval = 4000./ leftThumbStick_mapped;
+    //if (currentMillis - previousMillis >= interval) {
+
+        //previousMillis = currentMillis;
+    digitalWrite(PulsePin_L, LOW);
+    delay(2000 / leftThumbStick_mapped);
+
+    digitalWrite(PulsePin_L, HIGH);
+    delay(2000 / leftThumbStick_mapped);
+
+}
+
+
+// LED Test
+
+// int LED = 13;
+
+// void setup() {  // initialize digital pin 13 as an output.
+//    pinMode(LED, OUTPUT);
+// }
+
+// // the loop function runs over and over again forever
+
+// void loop() {
+//    digitalWrite(LED, HIGH); // turn the LED on (HIGH is the voltage level)
+//    delay(1000); // wait for a second
+//    digitalWrite(LED, LOW); // turn the LED off by making the voltage LOW
+//    delay(1000); // wait for a second
+// }
+
+

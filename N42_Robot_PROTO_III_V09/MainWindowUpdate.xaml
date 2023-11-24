@@ -1,0 +1,364 @@
+﻿<Window x:Class="n42_Robot_PROTO_III.MainWindowUpdate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:n42_Robot_PROTO_III"
+        mc:Ignorable="d"
+        Title="Main Window Update"
+        Height="668" 
+        Width="1132" 
+        WindowStartupLocation="CenterScreen"
+        Icon="Resources/Robot_Icon.ico"
+        WindowStyle="ThreeDBorderWindow"
+        FontFamily="Fonts/Inter-Regular"
+        FontSize="14"
+        Background="#58595B">
+
+
+    <!-- Start Window.Resources -->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="MyStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <!-- End Window.Resources -->
+
+    <Viewbox Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid x:Name="Grid">
+            <!-- Start Grid Defination -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="356"/>
+                <ColumnDefinition Width="776"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="92"/>
+                <RowDefinition Height="166"/>
+                <RowDefinition Height="266"/>
+                <RowDefinition Height="144"/>
+            </Grid.RowDefinitions>
+            <!-- End Grid Defination -->
+
+            <!-- Start Robot Status Module -->
+            <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Style="{StaticResource MyDockPanelStyle}">
+                <Border Style="{StaticResource MyBorderStyle}">
+                    <StackPanel Style="{StaticResource MyStackPanelStyle}">
+                        <TextBlock Text="Robot Status" Style="{StaticResource MyModuleTitleStyle}"/>
+                        <TextBlock Text="{Binding RobotStatus}" Style="{StaticResource RobotStatusStyle}"/>
+                    </StackPanel>
+                </Border>
+            </DockPanel>
+            <!-- End Robot Status Module -->
+
+            <!-- Start Connection Status Module -->
+            <DockPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Style="{StaticResource MyDockPanelStyle}">
+                <Border Style="{StaticResource MyBorderStyle}">
+                    <StackPanel Style="{StaticResource MyStackPanelStyle}">
+                        <TextBlock Text="Connection Status" Style="{StaticResource MyModuleTitleStyle}"/>
+                        <UniformGrid Rows="4" Columns="2" Style="{StaticResource UniformGridStyle}">
+                            <!--Hand Controller-->
+                            <TextBlock Text="Hand Controller" Style="{StaticResource StaticTextStyle}"/>
+                            <TextBlock Text="{Binding HandControllerConnection}" Style="{StaticResource ConnectionIdentifierStyle}"/>
+                            <!--Mega Controller-->
+                            <TextBlock Text="Mega Controller" Style="{StaticResource StaticTextStyle}"/>
+                            <TextBlock Text="{Binding MegaControllerConnection}" Style="{StaticResource ConnectionIdentifierStyle}"/>
+                            <!--Leonardo Controller-->
+                            <TextBlock Text="Leonardo Controller" Style="{StaticResource StaticTextStyle}"/>
+                            <TextBlock Text="{Binding LeonardoControllerConnection}" Style="{StaticResource ConnectionIdentifierStyle}"/>
+                            <!--NI DAQ-->
+                            <TextBlock Text="NI DAQ" Grid.Row="3" Style="{StaticResource StaticTextStyle}"/>
+                            <TextBlock Text="{Binding NIDAQConnection}" Style="{StaticResource ConnectionIdentifierStyle}"/>
+                        </UniformGrid>
+                    </StackPanel>
+                </Border>
+            </DockPanel>
+            <!-- End Connection Status Module -->
+
+            <!-- Start Adjust Robot Position Module -->
+            <DockPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" Style="{StaticResource MyDockPanelStyle}">
+                <Border Style="{StaticResource MyBorderStyle}">
+                    <StackPanel Style="{StaticResource MyStackPanelStyle}">
+                        <TextBlock Text="Adjust Robot Position" Style="{StaticResource MyModuleTitleStyle}"/>
+
+                        <!--Start Switch Button-->
+                        <CheckBox IsEnabled="{Binding ToggleButtonIsEnabled}" Checked="ToggleButton_Checked" Unchecked="ToggleButton_Unchecked">
+                            <CheckBox.Template>
+                                <ControlTemplate TargetType="{x:Type CheckBox}">
+                                    <Grid Width="300" Height="30" Margin="0,15">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100" />
+                                            <ColumnDefinition Width="100" />
+                                            <ColumnDefinition Width="100" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock x:Name="Manual" Text="Manual" Grid.Column="0" Style="{StaticResource ManualTextStyle}" />
+
+                                        <Border x:Name="switchBorder" Grid.Column="1" Background="{Binding ToggleButtonColor}" Style="{StaticResource SwitchBorderStyle}" >
+                                            <Grid>
+                                                <Ellipse x:Name="switchEllipse" Style="{StaticResource SwitchEllipseStyle}" />
+                                            </Grid>
+                                        </Border>
+
+                                        <TextBlock x:Name="Auto" Text="Auto" Grid.Column="2" Style="{StaticResource AutoTextStyle}"/>
+                                    </Grid>
+
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsChecked" Value="True">
+                                            <Setter TargetName="switchEllipse" Property="HorizontalAlignment" Value="Right" />
+                                            <Setter TargetName="Manual" Property="Foreground" Value="White"/>
+                                            <Setter TargetName="Auto" Property="Foreground" Value="#7FFFD4"/>
+                                        </Trigger>
+                                        <Trigger Property="IsChecked" Value="False">
+                                            <Setter TargetName="switchEllipse" Property="HorizontalAlignment" Value="Left" />
+                                            <Setter TargetName="Manual" Property="Foreground" Value="#7FFFD4"/>
+                                            <Setter TargetName="Auto" Property="Foreground" Value="White"/>
+                                        </Trigger>
+                                        <Trigger Property="IsEnabled" Value="False">
+                                            <Setter TargetName="Manual" Property="Foreground" Value="#808285"/>
+                                            <Setter TargetName="Auto" Property="Foreground" Value="#808285"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </CheckBox.Template>
+                        </CheckBox>
+                        <!--End Switch Button-->
+
+                        <Grid x:Name="TargetPositionGrid" Height="150">
+                            <!-- Start Grid Defination -->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="300"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="100" />
+                                <RowDefinition Height="50" />
+                            </Grid.RowDefinitions>
+
+                            <!--<UniformGrid Rows="1" Columns="2" Style="{StaticResource TargetPositionGridStyle}" >-->
+                            <Image Grid.Row="0" Source="/Resources/TargetImg.png" VerticalAlignment="Top" Margin="-33,-20,-33,0"/>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+
+                                <ComboBox x:Name="TargetPointComboBox" IsEnabled="False" Margin="10,0" Height="23" Width="100" FontWeight="Bold" FontStretch="SemiCondensed" TextOptions.TextHintingMode="Animated" TextOptions.TextFormattingMode="Display" Foreground="#FF144DD4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="1" BorderBrush="#FFEB6423" Background="{x:Null}" Template="{DynamicResource ComboBoxTemplate}" >
+                                    <ComboBox.Effect>
+                                        <DropShadowEffect ShadowDepth="3"/>
+                                    </ComboBox.Effect>
+
+                                    <ComboBoxItem IsSelected="True" Content="  Target A (168.5, 0, -47)  " HorizontalAlignment="Left"/>
+                                    <ComboBoxItem IsEnabled="False" Content="  Target B (188.3, -18.1, -38.6)    " HorizontalAlignment="Left"/>
+                                    <ComboBoxItem IsEnabled="False" Content="  Target C (145.5, 21.1, -35.2)    " HorizontalAlignment="Left"/>
+                                </ComboBox>
+
+                                <!--GO TO POSITION Button-->
+                                <Button x:Name="Btn_GoToPosition" IsEnabled="False" Content="GO TO POSITION" Margin="10,0" Style="{StaticResource GoToPostionButtonStyle}" Click="Btn_GoToPosition_Click">
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border x:Name="border" Background="#7FFFD4" CornerRadius="5">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter TargetName="border" Property="Background" Value="#AAFFE2" />
+                                                    <Setter Property="Cursor" Value="Hand"/>
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter TargetName="border" Property="Background" Value="#7FFFD4" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </StackPanel>
+                        </Grid>
+
+                    </StackPanel>
+                </Border>
+            </DockPanel>
+            <!-- End Adjust Robot Position Module -->
+
+            <!-- Start Controller Simulation Module -->
+            <DockPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1" Style="{StaticResource MyDockPanelStyle}">
+                <Border Style="{StaticResource MyBorderStyle}">
+                    <StackPanel Style="{StaticResource MyStackPanelStyle}">
+                        <TextBlock Text="Controller Simulation" Style="{StaticResource MyModuleTitleStyle}"/>
+
+                        <!--Left Thumb Stick-->
+                        <Grid Width="80" Height="80" ToolTip="Left Thumb Stick" Margin="-100,5,0,0">
+                            <Rectangle x:Name="LeftThumbCircle" Fill="#AFC1D1" RenderTransformOrigin="0.5,0.5">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform X="0" Y="0"/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Ellipse x:Name="LeftThumbPositionsCircle" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Ellipse.Fill>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="White"/>
+                                        <GradientStop Color="#7FFFD4" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                        </Grid>
+
+                        <!--Right Thumb Stick-->
+                        <Grid VerticalAlignment="Center" Width="80" Height="80" ToolTip="Right Thumb Stick" Margin="80,-80,0,0">
+                            <Rectangle x:Name="RightThumbCircle" Fill="#AFC1D1" RenderTransformOrigin="0.5,0.5">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform X="0" Y="0"/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Ellipse x:Name="RightThumbPositionsCircle" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Ellipse.Fill>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="White"/>
+                                        <GradientStop Color="#7FFFD4" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                        </Grid>
+
+                    </StackPanel>
+                </Border>
+            </DockPanel>
+            <!-- End Controller Simulation Module -->
+
+            <!-- Start 3D Visualization Module -->
+            <DockPanel Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Style="{StaticResource MyDockPanelStyle}">
+                <Grid>
+                    <Border Style="{StaticResource MyBorderStyle}">
+                        <StackPanel Style="{StaticResource MyStackPanelStyle}">
+                            <TextBlock Text="3D Visualization" Style="{StaticResource MyModuleTitleStyle}"/>
+                            <local:Visualization_UserControl Height="459" Width="714" />
+                        </StackPanel>
+                    </Border>
+                    <TextBlock Text="DOF#1: YAW" Margin="80,0,0,100" Style="{StaticResource DOFTextStyle}"/>
+                    <TextBlock Text="DOF#2: PITCH" Margin="200,0,0,100" Style="{StaticResource DOFTextStyle}"/>
+                    <TextBlock Text="{Binding DOF1_Angle}" Margin="100,0,0,40" Style="{StaticResource DOFValueStyle}"/>
+                    <TextBlock Text="{Binding DOF2_Angle}" Margin="220,0,0,40" Style="{StaticResource DOFValueStyle}"/>
+                    <Image Source="/Resources/neuro42.png" Style="{StaticResource MyLogoStyle}" />
+                </Grid>
+            </DockPanel>
+            <!-- End 3D Visualization Module -->
+
+            <!-- Start Control Panel Module -->
+            <DockPanel Grid.Row="3" Grid.Column="1" Grid.RowSpan="1" Style="{StaticResource MyDockPanelStyle}">
+                <Border Style="{StaticResource MyBorderStyle}">
+                    <StackPanel Style="{StaticResource MyStackPanelStyle}">
+                        <TextBlock Text="Control Panel" Style="{StaticResource MyModuleTitleStyle}"/>
+
+                        <Grid x:Name="ControlPanelGrid" HorizontalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="70"/>
+                                <RowDefinition Height="44"/>
+                            </Grid.RowDefinitions>
+
+                            <!--Connect Button-->
+                            <Button x:Name="Btn_Connect" Grid.Row="0" Grid.Column="0" Width="60" Height="60" Click="Btn_Connect_Click">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="border" CornerRadius="5">
+                                            <Image Source="/Resources/ConnectBtn.png" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text="CONNECT" Style="{StaticResource ControlPanelTextStyle}" />
+
+                            <!--Start Button-->
+                            <Button x:Name="Btn_Start" Grid.Row="0" Grid.Column="1" Width="60" Height="60" Click="Btn_Start_Click" IsEnabled="False">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="border" CornerRadius="5">
+                                            <Image Source="{Binding StartButtonImagePath}" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="START" Style="{StaticResource ControlPanelTextStyle}" />
+
+                            <!--Stop Button-->
+                            <Button x:Name="Btn_Stop" Grid.Row="0" Grid.Column="2" Width="60" Height="60" Click="Btn_Stop_Click" IsEnabled="False">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="border" CornerRadius="5">
+                                            <Image Source="{Binding StopButtonImagePath}" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <TextBlock Grid.Row="1" Grid.Column="2" Text="STOP" Style="{StaticResource ControlPanelTextStyle}" />
+
+
+                            <!--Home Button-->
+                            <Button x:Name="Btn_Home" Grid.Row="0" Grid.Column="3" Width="60" Height="60" Click="Btn_Home_Click">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="border" CornerRadius="5">
+                                            <Image Source="{Binding HomeButtonImagePath}" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <TextBlock Grid.Row="1" Grid.Column="3" Text="HOME" Style="{StaticResource ControlPanelTextStyle}" />
+
+                        </Grid>
+
+                    </StackPanel>
+                </Border>
+            </DockPanel>
+            <!-- End Control Panel Module -->
+
+        </Grid>
+    </Viewbox>
+
+</Window>

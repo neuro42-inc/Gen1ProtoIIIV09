@@ -1,0 +1,487 @@
+﻿{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Dependency Analysis",
+          "semanticVersion": "0.4.410601",
+          "informationUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview",
+          "rules": [
+            {
+              "id": "UA106",
+              "name": "PackageToBeAdded",
+              "fullDescription": {
+                "text": "Packages that need to be added in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            },
+            {
+              "id": "UA103",
+              "name": "ReferenceToBeDeleted",
+              "fullDescription": {
+                "text": "References that need to be deleted in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            },
+            {
+              "id": "UA105",
+              "name": "PackageToBeDeleted",
+              "fullDescription": {
+                "text": "Packages that need to be deleted in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            },
+            {
+              "id": "UA108",
+              "name": "FrameworkReferenceToBeAdded",
+              "fullDescription": {
+                "text": "Framework Reference that need to be added in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/XBox.GameController/XBox_GameController.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.Configuration needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.Web needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.Web.Extensions needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.Windows.SDK.Contracts, Version=10.0.19041.1 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package Ab3d.DXEngine, Version=5.2.8348 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package HelixToolkit, Version=2.23.0 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package HelixToolkit.SharpDX.Core, Version=2.23.0 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package LiveCharts, Version=0.9.7 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package LiveCharts.Wpf, Version=0.9.7 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package System.Drawing.Common, Version=4.7.0 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package System.Runtime.WindowsRuntime, Version=4.6.0 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package System.Runtime.WindowsRuntime.UI.Xaml, Version=4.6.0 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.Configuration.ConfigurationManager, Version=5.0.0 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.Windows.Compatibility, Version=7.0.0 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA108",
+          "level": "note",
+          "message": {
+            "text": "Framework Reference to Microsoft.AspNetCore.App needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/n42_Robot_PROTO_III_V02.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "API Upgradability",
+          "semanticVersion": "0.4.410601",
+          "informationUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview",
+          "rules": [
+            {
+              "id": "UA0002",
+              "name": "Types should be upgraded",
+              "fullDescription": {
+                "text": "Types should be upgraded"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "UA0002",
+          "level": "note",
+          "message": {
+            "text": "Type 'Controller' should be replaced with 'Microsoft.AspNetCore.Mvc.Controller'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/XBox.GameController/XBoxController.cs"
+                },
+                "region": {
+                  "startLine": 22
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "level": "note",
+          "message": {
+            "text": "Type 'Controller' should be replaced with 'Microsoft.AspNetCore.Mvc.Controller'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/XBox.GameController/XBoxController.cs"
+                },
+                "region": {
+                  "startLine": 64
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "level": "note",
+          "message": {
+            "text": "Type 'Controller' should be replaced with 'Microsoft.AspNetCore.Mvc.Controller'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/XBox_Connection/XBox_Connection.cs"
+                },
+                "region": {
+                  "startLine": 7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "level": "note",
+          "message": {
+            "text": "Type 'Controller' should be replaced with 'Microsoft.AspNetCore.Mvc.Controller'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/XBox_Connection/XBox_Connection.cs"
+                },
+                "region": {
+                  "startLine": 12
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "level": "note",
+          "message": {
+            "text": "Type 'Controller' should be replaced with 'Microsoft.AspNetCore.Mvc.Controller'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/MainWindow.xaml.cs"
+                },
+                "region": {
+                  "startLine": 80
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "level": "note",
+          "message": {
+            "text": "Type 'Controller' should be replaced with 'Microsoft.AspNetCore.Mvc.Controller'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Neuro42_Robot/Documents/n42_Robot_PROTO-III_SW/n42_Robot_PROTO_III_V02/N42_Robot_PROTO_III_V02/MainWindow.xaml.cs"
+                },
+                "region": {
+                  "startLine": 534
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "Component Analysis",
+          "semanticVersion": "0.4.410601",
+          "informationUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+        }
+      },
+      "results": [],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}
